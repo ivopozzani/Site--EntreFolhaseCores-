@@ -1,3 +1,9 @@
+/* ---------------- Loader---------------*/
+window.addEventListener('load', function () {
+  const loader = document.querySelector('.loader')
+  loader.className += ' hidden'
+})
+
 /* abre e fecha menu qndo clicar icone*/
 const nav = document.querySelector('#header nav')
 const toggle = document.querySelectorAll('nav .toggle')

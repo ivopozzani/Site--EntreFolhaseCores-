@@ -29,24 +29,54 @@ img {
    68 30.7 34.5
    67 29.1  50.8
    0 0 94.9
-  /* HSL color mode */
-  --base-color: hsl(var(--hue) 30.7% 34.5%);
-  --base-color-second: hsl(var(--hue) 29.1% 50.8%);
-  --base-color-alt: hsl(var(--hue) 57% 53%);
-  --title-color: hsl(var(--hue) 41% 10%);
-  --text-color: hsl(200 13% 9%);
-  --text-color-light: hsl(0 0% 98%);
-  --body-color: hsl(0 0% 94.9%);
-
-  /* fonts*/
-  --title-font-size: 1.875rem;
-  --subtitle-font-size: 1rem;
-
-  --title-font: 'Poppins', sans-serif;
-  --body-font: 'Dm Sans', sans-serif;
-}
-
-/*=====================Base==============*/
+   /* HSL color mode */
+   --base-color: hsl(var(--hue) 30.7% 34.5%);
+   --base-color-second: hsl(var(--hue) 29.1% 50.8%);
+   --base-color-alt: hsl(var(--hue) 57% 53%);
+   --title-color: hsl(var(--hue) 41% 10%);
+   --text-color: hsl(200 13% 9%);
+   --text-color-light: hsl(0 0% 98%);
+   --body-color: hsl(0 0% 94.9%);
+   
+   /* fonts*/
+   --title-font-size: 1.875rem;
+   --subtitle-font-size: 1rem;
+   
+   --title-font: 'Poppins', sans-serif;
+   --body-font: 'Dm Sans', sans-serif;
+  }
+  
+  /*=====================Loader==============*/
+  .loader {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;  
+    z-index: 100;
+    background-color: white;
+    
+  }
+  
+  .animation {
+    width: 5rem;
+    margin: auto;
+  }
+  
+  @keyframes fadeOut {
+   100% {
+     opacity: 0;
+     visibility: hidden;
+   }
+  
+  }
+  
+  .hidden {
+    animation: fadeOut 0.2s;
+    animation-fill-mode: forwards;
+  }
+  /*=====================Base==============*/
 html {
   scroll-behavior: smooth;
 }
@@ -57,6 +87,7 @@ body {
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
+
 
 .title {
   font: 700 var(--title-font-size) var(--title-font);
@@ -135,7 +166,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 99;
   background-color: var(--body-color);
 }
 
